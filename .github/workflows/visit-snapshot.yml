@@ -53,6 +53,10 @@ jobs:
           daily = [d for d in store.get("daily", []) if d.get("date") != today]
           daily.append(entry)
           daily.sort(key=lambda d: d["date"])
+          # 每日访问人数 = 相邻两日 site_uv（站点累计独立访客）之差，供前端折线图使用；
+          # 首日无前一天可差分，记为 null（前端跳过该点）。
+          for i, d in enumerate(daily):
+              d["visits"] = max(d["site_uv"] - daily[i - 1]["site_uv"], 0) if i else None
           store["daily"] = daily
           store["updated"] = today
 

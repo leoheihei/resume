@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>梁帅童 · 上海工程技术大学纺织服装学院</title>
-<meta name="description" content="梁帅童，上海工程技术大学纺织服装学院副教授，研究方向为纺织品洗护与护理、染色转移机理、产品碳足迹与家庭洗涤行为。">
+<meta name="description" content="梁帅童，上海工程技术大学纺织服装学院副教授，研究方向为纺织品洗护与护理、服装和纺织品可持续发展。">
 <meta name="color-scheme" content="light">
 <meta name="author" content="Shuaitong Liang">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231F3A5F'/%3E%3Ctext x='32' y='46' font-size='36' text-anchor='middle' fill='%23ffffff' font-family='Songti SC,STSong,serif'%3E%E6%A2%81%3C/text%3E%3C/svg%3E">
@@ -171,6 +171,19 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
   letter-spacing:.03em;margin:0 0 22px;font-variant-numeric:tabular-nums}
 .visits b{color:var(--muted);font-weight:600}
 .visits[hidden]{display:none}
+
+/* ---------- 访问趋势折线图 ---------- */
+.viz{margin:4px 0 26px;border:1px solid var(--line);padding:14px 14px 8px}
+.viz[hidden]{display:none}
+.viz-cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  font-size:12px;color:var(--faint);letter-spacing:.04em;margin:0 2px 10px}
+.viz-cap b{color:var(--muted);font-weight:600}
+#visitChart svg{display:block;width:100%;height:auto}
+#visitChart .grid{stroke:var(--hair);stroke-width:1}
+#visitChart .axis{stroke:var(--line);stroke-width:1}
+#visitChart .vline{fill:none;stroke:var(--accent);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+#visitChart .dot{fill:var(--accent)}
+#visitChart text{font-family:var(--sans);font-size:10px;fill:var(--faint)}
 .f-mail{font-family:var(--sans);font-size:15px;color:var(--accent);border:0}
 .f-line{font-size:12.5px;color:var(--muted);margin:8px 0 0;line-height:1.75}
 .f-line .en{font-size:11px;letter-spacing:.1em;color:var(--faint)}
@@ -220,7 +233,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
 @media print{
   @page{margin:16mm 15mm}
   body{font-size:10.5pt;line-height:1.6;color:#000}
-  .rail,.topbar,.lang,.totop,.skip,.visits,.copy-mail{display:none!important}
+  .rail,.topbar,.lang,.totop,.skip,.visits,.copy-mail,.viz{display:none!important}
   .shell{display:block;max-width:none;padding:0}
   main{max-width:none}
   section{padding:14pt 0 0;break-inside:auto}
@@ -307,29 +320,17 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
           </div>
           <div class="area">
             <p class="a-num">02</p>
-            <h3><span class="i-zh">染色转移机理</span><span class="i-en">Dye Transfer Mechanisms</span></h3>
-            <p class="a-en">DYE TRANSFER &amp; COLOUR CROSS-STAINING</p>
-            <p><span class="i-zh">洗涤串染的传质路径、影响因素与抑制方法，异味吸附与去除。</span><span class="i-en">Mass-transfer pathways, influencing factors and inhibition of colour cross-staining in laundering, together with odour adsorption and removal.</span></p>
-          </div>
-          <div class="area">
-            <p class="a-num">03</p>
-            <h3><span class="i-zh">产品碳足迹</span><span class="i-en">Product Carbon Footprint</span></h3>
-            <p class="a-en">CARBON FOOTPRINT &amp; SUSTAINABILITY</p>
-            <p><span class="i-zh">服装使用阶段的温室气体核算、低碳洗护技术与可持续性评价。</span><span class="i-en">Greenhouse-gas accounting for the use phase of clothing, low-carbon care technologies and sustainability assessment.</span></p>
-          </div>
-          <div class="area">
-            <p class="a-num">04</p>
-            <h3><span class="i-zh">家庭洗涤行为</span><span class="i-en">Domestic Laundry Behaviour</span></h3>
-            <p class="a-en">HOUSEHOLD LAUNDRY BEHAVIOUR</p>
-            <p><span class="i-zh">洗护行为的实证调研与统计建模，行为—能耗—排放的关联分析。</span><span class="i-en">Empirical surveys and statistical modelling of laundry behaviour, linking behaviour to energy use and emissions.</span></p>
+            <h3><span class="i-zh">服装和纺织品可持续发展</span><span class="i-en">Sustainable Apparel and Textiles</span></h3>
+            <p class="a-en">SUSTAINABLE APPAREL &amp; TEXTILES</p>
+            <p><span class="i-zh">服装使用阶段的温室气体核算与低碳洗护技术，洗护行为的实证调研与统计建模，行为—能耗—排放的关联分析与可持续性评价。</span><span class="i-en">Greenhouse-gas accounting and low-carbon care technologies for the use phase of clothing, empirical surveys and statistical modelling of laundry behaviour, and sustainability assessment linking behaviour to energy use and emissions.</span></p>
           </div>
         </div>
       </section>
 
       <section id="bio">
         <div class="s-head"><span class="s-num">02</span><h2><span class="i-zh">学术简介</span><span class="i-en">Biography</span><span class="en">BIOGRAPHY</span></h2></div>
-        <p class="lede i-zh">2018 年获东华大学服装设计与工程专业工学博士学位，同年入职上海工程技术大学纺织服装学院。研究聚焦纺织品家庭洗护过程中的传热传质、染料转移与纤维损伤机理，以及洗护行为的碳足迹核算与可持续性评价。成果发表于 <i>Textile Research Journal</i>、<i>AATCC Journal of Research</i>、<i>International Journal of Clothing Science and Technology</i> 及《纺织学报》等期刊；主持企业横向课题多项，参与国家自然科学基金项目。承担《数理统计方法》《服装生产管理》《服装材料学》等课程，指导硕士研究生与本科毕业设计。</p>
-        <p class="lede i-en">He received his Ph.D. in Fashion Design and Engineering from Donghua University in 2018 and joined the School of Textiles and Fashion at Shanghai University of Engineering Science in the same year. His research centres on heat and mass transfer, dye transfer and fibre damage during domestic textile care, together with carbon-footprint accounting and sustainability assessment of laundering behaviour. His work has appeared in <i>Textile Research Journal</i>, <i>AATCC Journal of Research</i>, <i>International Journal of Clothing Science and Technology</i> and the <i>Journal of Textile Research</i>. He has led a number of industry-funded projects and has taken part in projects funded by the National Natural Science Foundation of China. He teaches Mathematical Statistics, Apparel Production Management and Clothing Materials, and supervises master&rsquo;s students and undergraduate theses.</p>
+        <p class="lede i-zh">2018 年获东华大学服装设计与工程专业工学博士学位，同年入职上海工程技术大学纺织服装学院。研究聚焦纺织品家庭洗护过程中的传热传质与纤维损伤，以及服装和纺织品的可持续发展——使用阶段的碳足迹核算、家庭洗涤行为调研与可持续性评价。成果发表于 <i>Textile Research Journal</i>、<i>AATCC Journal of Research</i>、<i>International Journal of Clothing Science and Technology</i> 及《纺织学报》等期刊；主持企业横向课题多项。承担《数理统计方法》《服装生产管理》《服装材料学》等课程，指导硕士研究生与本科毕业设计。</p>
+        <p class="lede i-en">He received his Ph.D. in Fashion Design and Engineering from Donghua University in 2018 and joined the School of Textiles and Fashion at Shanghai University of Engineering Science in the same year. His research centres on heat and mass transfer and fibre damage during domestic textile care, and on the sustainability of apparel and textiles — carbon-footprint accounting for the use phase, domestic laundry behaviour, and sustainability assessment. His work has appeared in <i>Textile Research Journal</i>, <i>AATCC Journal of Research</i>, <i>International Journal of Clothing Science and Technology</i> and the <i>Journal of Textile Research</i>. He has led a number of industry-funded projects. He teaches Mathematical Statistics, Apparel Production Management and Clothing Materials, and supervises master&rsquo;s students and undergraduate theses.</p>
       </section>
 
       <section id="experience">
@@ -339,22 +340,16 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
         <dl class="tl">
           <dt>2014–2018</dt>
           <dd><span class="i-zh">东华大学 · 服装设计与工程 · 工学博士</span><span class="i-en">Donghua University · Fashion Design and Engineering · Ph.D.</span><span class="sub"><span class="i-zh">2016.11–2017.11 国家留学基金委公派，美国加州大学戴维斯分校</span><span class="i-en">Nov 2016 – Nov 2017: visiting scholar, University of California, Davis (CSC scholarship)</span></span></dd>
-          <dt>2011–2014</dt>
-          <dd><span class="i-zh">上海工程技术大学 · 服装设计与工程 · 工学硕士</span><span class="i-en">Shanghai University of Engineering Science · Fashion Design and Engineering · M.Eng.</span></dd>
-          <dt>2006–2010</dt>
-          <dd><span class="i-zh">陕西科技大学 · 服装设计与工程 · 工学学士</span><span class="i-en">Shaanxi University of Science and Technology · Fashion Design and Engineering · B.Eng.</span></dd>
         </dl>
 
         <h3 style="margin-top:34px"><span class="i-zh">任职</span><span class="i-en">Appointments</span></h3>
         <dl class="tl">
           <dt>2022.12 起</dt>
-          <dd><span class="i-zh">上海工程技术大学 副教授（专业技术七级）</span><span class="i-en">Associate Professor, Shanghai University of Engineering Science</span></dd>
+          <dd><span class="i-zh">上海工程技术大学 副教授</span><span class="i-en">Associate Professor, Shanghai University of Engineering Science</span></dd>
           <dt>2018 年起</dt>
           <dd><span class="i-zh">上海工程技术大学纺织服装学院 专任教师</span><span class="i-en">Faculty member, School of Textiles and Fashion, Shanghai University of Engineering Science</span></dd>
           <dt>现任</dt>
           <dd><span class="i-zh">服装设计与工程系副主任；硕士生导师；班主任与学业导师</span><span class="i-en">Deputy Head, Department of Fashion Design and Engineering; master&rsquo;s supervisor; class tutor and academic advisor</span></dd>
-          <dt>2019.10–2020.12</dt>
-          <dd><span class="i-zh">企业挂职锻炼</span><span class="i-en">Secondment to industry</span></dd>
           <dt>社会兼职</dt>
           <dd><span class="i-zh">上海纺织协会会员；杭州楠梧服装有限公司技术经理</span><span class="i-en">Member, Shanghai Textile Association; technical manager, Hangzhou Nanwu Garment Co., Ltd.</span></dd>
         </dl>
@@ -402,15 +397,15 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
   </li>
   <li class="pub">
     <p class="pub-title">再生与原生涤纶纤维的特征分析</p>
-    <p class="pub-meta"><i>针织工业</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第一作者</span><span class="i-en">First author</span></span></p>
+    <p class="pub-meta"><i>针织工业</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第 2 作者</span><span class="i-en">Author 2 of 4</span></span></p>
   </li>
   <li class="pub">
     <p class="pub-title">城市家庭纺织品护理的碳足迹量化研究</p>
-    <p class="pub-meta"><i>丝绸</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第一作者</span><span class="i-en">First author</span></span></p>
+    <p class="pub-meta"><i>丝绸</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第 2 作者 · 通讯作者</span><span class="i-en">Author 2 of 5 · corresponding</span></span></p>
   </li>
   <li class="pub">
     <p class="pub-title">羊毛织物洗涤中染料转移的影响因素</p>
-    <p class="pub-meta"><i>毛纺科技</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第一作者</span><span class="i-en">First author</span></span></p>
+    <p class="pub-meta"><i>毛纺科技</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第 2 作者 · 通讯作者</span><span class="i-en">Author 2 of 5 · corresponding</span></span></p>
   </li>
 </ul>
 <h3 class="pub-year" id="pub-2024">2024<span class="cnt"><span class="i-zh">5 篇</span><span class="i-en">5 papers</span></span></h3>
@@ -421,11 +416,11 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
   </li>
   <li class="pub">
     <p class="pub-title">The Environmental Impact of Low-Pressure Anhydrous Dyeing Technology for Polyester: Carbon Footprint Quantification and Evaluation</p>
-    <p class="pub-meta"><i>AATCC Journal of Research</i> <span class="tag">SCIE</span> <span class="tag tag-award">2025 J.W. Weaver Award</span><span class="role"><span class="i-zh">通讯作者</span><span class="i-en">Corresponding author</span></span><a class="doi" href="https://doi.org/10.1177/24723444241275992" target="_blank" rel="noopener">DOI</a></p>
+    <p class="pub-meta"><i>AATCC Journal of Research</i> <span class="tag">SCIE</span> <span class="tag tag-award">2025 J.W. Weaver Award</span><span class="role"><span class="i-zh">第 2 作者 · 通讯作者</span><span class="i-en">Author 2 of 6 · corresponding</span></span><a class="doi" href="https://doi.org/10.1177/24723444241275992" target="_blank" rel="noopener">DOI</a></p>
   </li>
   <li class="pub">
     <p class="pub-title">How washing behaviors influence GHG emissions in textile use phase: a PLS-SEM analysis of household washing behaviors in Shanghai</p>
-    <p class="pub-meta"><i>Int. J. Clothing Sci. &amp; Tech.</i> <span class="tag">SCIE</span><span class="role"><span class="i-zh">通讯作者</span><span class="i-en">Corresponding author</span></span><a class="doi" href="https://doi.org/10.1108/ijcst-03-2024-0066" target="_blank" rel="noopener">DOI</a></p>
+    <p class="pub-meta"><i>Int. J. Clothing Sci. &amp; Tech.</i> <span class="tag">SCIE</span><span class="role"><span class="i-zh">第 2 作者 · 通讯作者</span><span class="i-en">Author 2 of 7 · corresponding</span></span><a class="doi" href="https://doi.org/10.1108/ijcst-03-2024-0066" target="_blank" rel="noopener">DOI</a></p>
   </li>
   <li class="pub">
     <p class="pub-title">Effect of PEG ‐400 on dyeing properties of cotton fabric in non‐aqueous medium system</p>
@@ -433,7 +428,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
   </li>
   <li class="pub">
     <p class="pub-title">基于光谱特征和图像处理的真丝织物光泽研究</p>
-    <p class="pub-meta"><i>丝绸</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第一作者</span><span class="i-en">First author</span></span></p>
+    <p class="pub-meta"><i>丝绸</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第 2 作者</span><span class="i-en">Author 2 of 6</span></span></p>
   </li>
 </ul>
 <h3 class="pub-year" id="pub-2023">2023<span class="cnt"><span class="i-zh">4 篇</span><span class="i-en">4 papers</span></span></h3>
@@ -444,15 +439,15 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
   </li>
   <li class="pub">
     <p class="pub-title">Analysis of Fabric Dyeing Intrusion Kinetics Based on Probability Density Function</p>
-    <p class="pub-meta"><i>纺织学报</i> <span class="tag">EI</span><span class="role"><span class="i-zh">通讯作者</span><span class="i-en">Corresponding author</span></span></p>
+    <p class="pub-meta"><i>纺织学报</i> <span class="tag">EI</span><span class="role"><span class="i-zh">第 2 作者 · 通讯作者</span><span class="i-en">Author 2 of 5 · corresponding</span></span></p>
   </li>
   <li class="pub">
     <p class="pub-title">棉织物三手烟去除影响因素研究及成分分析</p>
-    <p class="pub-meta"><i>丝绸</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第一作者</span><span class="i-en">First author</span></span></p>
+    <p class="pub-meta"><i>丝绸</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第 2 作者 · 通讯作者</span><span class="i-en">Author 2 of 7 · corresponding</span></span></p>
   </li>
   <li class="pub">
     <p class="pub-title">再生与原生涤纶醇解液的液相色谱检测及鉴别</p>
-    <p class="pub-meta"><i>印染</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第一作者</span><span class="i-en">First author</span></span></p>
+    <p class="pub-meta"><i>印染</i> <span class="tag">北大核心</span><span class="role"><span class="i-zh">第 2 作者</span><span class="i-en">Author 2 of 5</span></span></p>
   </li>
 </ul>
 <h3 class="pub-year" id="pub-2022">2022<span class="cnt"><span class="i-zh">7 篇</span><span class="i-en">7 papers</span></span></h3>
@@ -467,15 +462,15 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
   </li>
   <li class="pub">
     <p class="pub-title">The carbon footprint of household clothing washing in Shanghai during winter and spring based on empirical data</p>
-    <p class="pub-meta"><i>Textile Research Journal</i> <span class="tag">SCIE</span><span class="role"><span class="i-zh">通讯作者</span><span class="i-en">Corresponding author</span></span><a class="doi" href="https://doi.org/10.1177/00405175221137739" target="_blank" rel="noopener">DOI</a></p>
+    <p class="pub-meta"><i>Textile Research Journal</i> <span class="tag">SCIE</span><span class="role"><span class="i-zh">第 3 作者 · 通讯作者</span><span class="i-en">Author 3 of 7 · corresponding</span></span><a class="doi" href="https://doi.org/10.1177/00405175221137739" target="_blank" rel="noopener">DOI</a></p>
   </li>
   <li class="pub">
     <p class="pub-title">Tobacco and Hot Pot Odor Adsorbed by Cotton, Wool, and Polyester Fabrics: Desorption Components and Dynamic Analysis</p>
-    <p class="pub-meta"><i>AATCC Journal of Research</i> <span class="tag">SCIE</span><span class="role"><span class="i-zh">通讯作者</span><span class="i-en">Corresponding author</span></span><a class="doi" href="https://doi.org/10.1177/24723444221132330" target="_blank" rel="noopener">DOI</a></p>
+    <p class="pub-meta"><i>AATCC Journal of Research</i> <span class="tag">SCIE</span><span class="role"><span class="i-zh">第 2 作者 · 通讯作者</span><span class="i-en">Author 2 of 5 · corresponding</span></span><a class="doi" href="https://doi.org/10.1177/24723444221132330" target="_blank" rel="noopener">DOI</a></p>
   </li>
   <li class="pub">
     <p class="pub-title">Identification of Reactive Dye Transfer Source and Comparison of Two Types of Dye Transfer Inhibitors</p>
-    <p class="pub-meta"><i>AATCC Journal of Research</i> <span class="tag">SCIE</span><span class="role"><span class="i-zh">通讯作者</span><span class="i-en">Corresponding author</span></span><a class="doi" href="https://doi.org/10.1177/24723444221084386" target="_blank" rel="noopener">DOI</a></p>
+    <p class="pub-meta"><i>AATCC Journal of Research</i> <span class="tag">SCIE</span><span class="role"><span class="i-zh">第 2 作者 · 通讯作者</span><span class="i-en">Author 2 of 5 · corresponding</span></span><a class="doi" href="https://doi.org/10.1177/24723444221084386" target="_blank" rel="noopener">DOI</a></p>
   </li>
   <li class="pub">
     <p class="pub-title">棉织物洗涤中染料转移抑制的影响因素研究</p>
@@ -544,11 +539,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
     <p class="pub-meta"><i>J. Business Administration Research</i><span class="role"><span class="i-zh">第 2 作者</span><span class="i-en">Author 2 of 3</span></span><a class="doi" href="https://doi.org/10.5430/jbar.v3n2p28" target="_blank" rel="noopener">DOI</a></p>
   </li>
 </ul>
-<!-- VERIFY: 以下 3 条公开检索命中但归属待确认，暂不收录；确认后可解除注释。
-  1) 2014 J. Business Administration Research — "Research on the Custom Pricing Model of Online Retail Clothing"（机构署名匹配，主题偏营销）
-  2) 2025 J. Environ. Chem. Eng. — "The study of reactive dyes degradation in a current cycle reversal system..."（已收录，位次 7/10，请确认）
-  3) 2026 Zenodo dataset — "Collection catchment, not chemistry, bounds textile-to-textile recycling of polyester"（一作，机构署名未匹配）
--->
+<!-- VERIFY: 2026 Zenodo dataset — "Collection catchment, not chemistry, bounds textile-to-textile recycling of polyester"（公开检索命中，机构署名未匹配，暂不收录） -->
       </section>
 
       <section id="projects">
@@ -562,31 +553,15 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
           </li>
           <li>
             <p class="t"><span class="kind"><span class="i-zh">横向</span><span class="i-en">Industry</span></span><span class="i-zh">干衣机用衣物护理液施加方案的研发</span><span class="i-en">Development of a dosing scheme for care liquid in tumble dryers</span></p>
-            <p class="m"><span class="i-zh">委托单位：东华大学</span><span class="i-en">Commissioned by Donghua University</span></p>
           </li>
           <li>
             <p class="t"><span class="kind"><span class="i-zh">横向</span><span class="i-en">Industry</span></span><span class="i-zh">衣物干燥异毛粘附机理及去除方法</span><span class="i-en">Mechanism and removal of foreign-fibre adhesion during drying</span></p>
-            <p class="m"><span class="i-zh">委托单位：东华大学</span><span class="i-en">Commissioned by Donghua University</span></p>
           </li>
           <li>
             <p class="t"><span class="kind"><span class="i-zh">横向</span><span class="i-en">Industry</span></span><span class="i-zh">干衣机护理剂缓释施加系统</span><span class="i-en">Controlled-release dosing system for care agents in tumble dryers</span></p>
-            <p class="m"><span class="i-zh">委托单位：东华大学</span><span class="i-en">Commissioned by Donghua University</span></p>
           </li>
           <li>
             <p class="t"><span class="kind"><span class="i-zh">横向</span><span class="i-en">Industry</span></span><span class="i-zh">纺织品智慧洗护及污渍处理</span><span class="i-en">Smart textile care and stain treatment</span></p>
-            <p class="m"><span class="i-zh">委托单位：青岛大学</span><span class="i-en">Commissioned by Qingdao University</span></p>
-          </li>
-        </ul>
-
-        <h3 style="margin-top:32px"><span class="i-zh">参与项目</span><span class="i-en">Co-Investigator</span></h3>
-        <ul class="rows">
-          <li>
-            <p class="t"><span class="kind"><span class="i-zh">国家自然科学基金</span><span class="i-en">NSFC</span></span><span class="i-zh">面上项目</span><span class="i-en">General Programme</span></p>
-            <p class="m"><span class="i-zh">参与</span><span class="i-en">Participant</span></p>
-          </li>
-          <li>
-            <p class="t"><span class="kind"><span class="i-zh">国家自然科学基金</span><span class="i-en">NSFC</span></span><span class="i-zh">青年项目</span><span class="i-en">Young Scientists Programme</span></p>
-            <p class="m"><span class="i-zh">参与</span><span class="i-en">Participant</span></p>
           </li>
         </ul>
 
@@ -658,10 +633,16 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
 
       <footer>
         <p class="visits" id="visits" hidden>
-          <span><span class="i-zh">今日访问</span><span class="i-en">Visits today</span> <b id="v-today">—</b><span class="i-zh"> 次</span><span class="i-en"></span></span>
+          <span id="v-today-item" hidden><span class="i-zh">今日访问</span><span class="i-en">Visits today</span> <b id="v-today">—</b><span class="i-zh"> 次</span><span class="i-en"></span></span>
           <span><span class="i-zh">本页累计</span><span class="i-en">This page, total</span> <b id="vercount_value_page_pv">—</b><span class="i-zh"> 次</span><span class="i-en"></span></span>
-          <span><span class="i-zh">站点访客</span><span class="i-en">Site visitors</span> <b id="vercount_value_site_uv">—</b><span class="i-zh"> 人</span><span class="i-en"></span></span>
         </p>
+        <figure class="viz" id="visitChartFig" hidden>
+          <figcaption class="viz-cap">
+            <span><span class="i-zh">每日访问人数</span><span class="i-en">Daily visitors</span> · <span class="i-zh">自 <b id="vc-from">—</b> 起，由每日快照的站点独立访客数差分得出</span><span class="i-en">from <b id="vc-from-en">—</b>, differenced from daily site-UV snapshots</span></span>
+            <span><span class="i-zh">峰值 <b id="vc-max">—</b> 人</span><span class="i-en">Peak <b id="vc-max-en">—</b></span></span>
+          </figcaption>
+          <div id="visitChart" role="img" aria-label="每日访问人数折线图 / Daily visitors line chart"></div>
+        </figure>
         <p><a class="f-mail" href="mailto:liangst@sues.edu.cn">liangst@sues.edu.cn</a></p>
         <p class="f-line"><span class="i-zh">上海市松江区龙腾路 333 号 · 上海工程技术大学纺织服装学院</span><span class="i-en">333 Longteng Road, Songjiang District, Shanghai, China</span></p>
         <p class="f-line en">SCHOOL OF TEXTILES AND FASHION, SHANGHAI UNIVERSITY OF ENGINEERING SCIENCE</p>
@@ -684,7 +665,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
   "name": "梁帅童",
   "alternateName": "Shuaitong Liang",
   "jobTitle": "副教授",
-  "description": "上海工程技术大学纺织服装学院副教授，研究方向为纺织品洗护与护理、染色转移机理、产品碳足迹与家庭洗涤行为。",
+  "description": "上海工程技术大学纺织服装学院副教授，研究方向为纺织品洗护与护理、服装和纺织品可持续发展。",
   "email": "mailto:liangst@sues.edu.cn",
   "url": "https://leoheihei.github.io/resume/",
   "affiliation": {
@@ -699,13 +680,11 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
     "addressCountry": "CN"
   },
   "alumniOf": [
-    { "@type": "CollegeOrUniversity", "name": "Donghua University" },
-    { "@type": "CollegeOrUniversity", "name": "Shanghai University of Engineering Science" },
-    { "@type": "CollegeOrUniversity", "name": "Shaanxi University of Science and Technology" }
+    { "@type": "CollegeOrUniversity", "name": "Donghua University" }
   ],
   "knowsAbout": [
     "Textile care and laundering",
-    "Dye transfer mechanisms",
+    "Sustainable apparel and textiles",
     "Product carbon footprint",
     "Domestic laundry behaviour"
   ]
@@ -797,7 +776,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
   });
 })();
 
-/* ---------- 访问统计：今日 = 相邻两次快照 page_pv 之差 ---------- */
+/* ---------- 访问统计：今日 = 相邻两次快照 page_pv 之差；折线图 = site_uv 差分的每日访问人数 ---------- */
 (function () {
   var box = document.getElementById('visits');
   if (!box) return;
@@ -809,16 +788,80 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
     var v = (el.textContent || '').replace(/[^0-9]/g, '');
     return v ? parseInt(v, 10) : null;
   }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function drawChart(arr) {
+    var fig = document.getElementById('visitChartFig');
+    var target = document.getElementById('visitChart');
+    if (!fig || !target || arr.length < 1) return;
+    /* 每日访问人数：优先用快照预算的 visits；否则由站点累计独立访客 site_uv 差分；首点无前一天，跳过 */
+    var pairs = [];
+    for (var i0 = 1; i0 < arr.length; i0++) {
+      var v = null;
+      if (typeof arr[i0].visits === 'number' && isFinite(arr[i0].visits)) v = arr[i0].visits;
+      else if (typeof arr[i0].site_uv === 'number' && isFinite(arr[i0].site_uv) &&
+               typeof arr[i0 - 1].site_uv === 'number' && isFinite(arr[i0 - 1].site_uv)) {
+        v = Math.max(arr[i0].site_uv - arr[i0 - 1].site_uv, 0);
+      }
+      if (v !== null) pairs.push({ date: arr[i0].date, v: v });
+    }
+    if (pairs.length < 1) return;
+    var data = pairs;
+    var vals = data.map(function (x) { return x.v; });
+    arr = data; /* 后续坐标轴标签复用 arr.date */
+    var n = vals.length;
+    var W = 640, H = 210, padL = 40, padR = 12, padT = 14, padB = 26;
+    var maxV = Math.max.apply(null, vals.concat(1));
+    var niceMax = Math.max(4, Math.ceil(maxV / 4) * 4);
+    function X(i) { return n === 1 ? (padL + (W - padR)) / 2 : padL + (W - padL - padR) * i / (n - 1); }
+    function Y(v) { return padT + (H - padT - padB) * (1 - v / niceMax); }
+    var s = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet">';
+    for (var t = 0; t <= 4; t++) {
+      var gv = niceMax * t / 4, gy = Y(gv);
+      s += '<line class="grid" x1="' + padL + '" y1="' + gy.toFixed(1) + '" x2="' + (W - padR) + '" y2="' + gy.toFixed(1) + '"/>';
+      s += '<text x="' + (padL - 7) + '" y="' + (gy + 3.5).toFixed(1) + '" text-anchor="end">' + (Number.isInteger(gv) ? gv : gv.toFixed(1)) + '</text>';
+    }
+    s += '<line class="axis" x1="' + padL + '" y1="' + (H - padB) + '" x2="' + (W - padR) + '" y2="' + (H - padB) + '"/>';
+    var pts = vals.map(function (v, i) { return X(i).toFixed(1) + ',' + Y(v).toFixed(1); });
+    if (n > 1) s += '<polyline class="vline" points="' + pts.join(' ') + '"/>';
+    if (n <= 45) {
+      for (var i = 0; i < n; i++) {
+        s += '<circle class="dot" cx="' + X(i).toFixed(1) + '" cy="' + Y(vals[i]).toFixed(1) + '" r="2.6"><title>' + esc(arr[i].date) + ' · ' + vals[i] + '</title></circle>';
+      }
+    }
+    var ticks = Math.min(n, 6), seen = {};
+    for (var k = 0; k < ticks; k++) {
+      var ix = Math.round(k * (n - 1) / Math.max(ticks - 1, 1));
+      if (seen[ix]) continue; seen[ix] = 1;
+      var lbl = String(arr[ix].date || '').slice(5);
+      if (!lbl) continue;
+      s += '<text x="' + X(ix).toFixed(1) + '" y="' + (H - padB + 15) + '" text-anchor="' + (ix === 0 ? 'start' : ix === n - 1 ? 'end' : 'middle') + '">' + esc(lbl) + '</text>';
+    }
+    s += '</svg>';
+    target.innerHTML = s;
+    var from = document.getElementById('vc-from'), fromEn = document.getElementById('vc-from-en');
+    var mx = document.getElementById('vc-max'), mxEn = document.getElementById('vc-max-en');
+    var first = String(arr[0].date || '').slice(0, 10);
+    var peak = Math.max.apply(null, vals);
+    if (from) from.textContent = first;
+    if (fromEn) fromEn.textContent = first;
+    if (mx) mx.textContent = String(peak);
+    if (mxEn) mxEn.textContent = String(peak);
+    fig.hidden = false;
+  }
   fetch('visits.json?ts=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (d) {
       var arr = (d.daily || []).filter(function (x) {
         return x && x.date && typeof x.page_pv === 'number';
       }).sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+      if (arr.length < 1) return;
+      drawChart(arr);
       if (arr.length < 2) return;
       var diff = arr[arr.length - 1].page_pv - arr[arr.length - 2].page_pv;
       var t = document.getElementById('v-today');
+      var item = document.getElementById('v-today-item');
       if (t) t.textContent = String(Math.max(0, diff));
+      if (item) item.hidden = false;
     })
     .catch(function () {});
   var tries = 0;
