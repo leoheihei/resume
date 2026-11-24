@@ -658,9 +658,8 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
 
       <footer>
         <p class="visits" id="visits" hidden>
-          <span><span class="i-zh">今日访问</span><span class="i-en">Visits today</span> <b id="v-today">—</b><span class="i-zh"> 次</span><span class="i-en"></span></span>
+          <span id="v-today-item" hidden><span class="i-zh">今日访问</span><span class="i-en">Visits today</span> <b id="v-today">—</b><span class="i-zh"> 次</span><span class="i-en"></span></span>
           <span><span class="i-zh">本页累计</span><span class="i-en">This page, total</span> <b id="vercount_value_page_pv">—</b><span class="i-zh"> 次</span><span class="i-en"></span></span>
-          <span><span class="i-zh">站点访客</span><span class="i-en">Site visitors</span> <b id="vercount_value_site_uv">—</b><span class="i-zh"> 人</span><span class="i-en"></span></span>
         </p>
         <p><a class="f-mail" href="mailto:liangst@sues.edu.cn">liangst@sues.edu.cn</a></p>
         <p class="f-line"><span class="i-zh">上海市松江区龙腾路 333 号 · 上海工程技术大学纺织服装学院</span><span class="i-en">333 Longteng Road, Songjiang District, Shanghai, China</span></p>
@@ -818,7 +817,9 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 56px}
       if (arr.length < 2) return;
       var diff = arr[arr.length - 1].page_pv - arr[arr.length - 2].page_pv;
       var t = document.getElementById('v-today');
+      var item = document.getElementById('v-today-item');
       if (t) t.textContent = String(Math.max(0, diff));
+      if (item) item.hidden = false;
     })
     .catch(function () {});
   var tries = 0;
