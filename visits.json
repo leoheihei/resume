@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "daily": [
     {
       "date": "2026-11-24",
@@ -21,6 +21,13 @@
       "site_uv": 195,
       "page_pv": 22,
       "visits": 4
+    },
+    {
+      "date": "2026-11-27",
+      "site_pv": 773,
+      "site_uv": 196,
+      "page_pv": 25,
+      "visits": 1
     }
   ]
 }
